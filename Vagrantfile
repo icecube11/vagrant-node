@@ -3,8 +3,10 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.require_version ">= 1.6.5"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "boxcutter/ubuntu1404"
+  config.vm.box = "bento/ubuntu-16.04"
   config.vm.box_check_update = true
+  config.vm.box_url = "https://atlas.hashicorp.com/bento/boxes/ubuntu-16.04"
+
 
   # Ports for http, https, Express, http-server and Harp
   config.vm.network "forwarded_port", guest: 80, host: 80, host_ip: "127.0.0.1" 
