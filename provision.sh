@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo echo "Europe/Berlin" | sudo tee /etc/timezone
+sudo echo "Europe/London" | sudo tee /etc/timezone
 sudo dpkg-reconfigure -f noninteractive tzdata
 
 sudo apt-get update -y
@@ -10,8 +10,9 @@ git clone https://github.com/creationix/nvm.git ~/.nvm && cd ~/.nvm && git check
 echo "source ~/.nvm/nvm.sh" >> ~/.profile
 source ~/.profile
 
-nvm install 0.10
-nvm alias default 0.10
+# install the latest LTS version of node
+nvm install --lts node
+nvm alias default lts/*
 
 npm install -g browserify
 npm install -g eslint
