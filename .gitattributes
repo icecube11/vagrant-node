@@ -11,6 +11,10 @@
 *.sed  text eol=lf
 *.sh   text eol=lf
 
+Vagrantfile text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
+
 *.png  binary
 *.jpg  binary
 *.p12  binary
